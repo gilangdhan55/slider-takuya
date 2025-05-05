@@ -31,7 +31,12 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
-const foto = document.createElement("img")
-foto.src = '1.jpg';
-  foto.alt = 'Gambar dari JavaScript';
-  document.getElementById('img').appendChild(foto);
+
+const arr = ['1', '2', '3'];
+
+for(const item of arr) {
+   const foto = document.createElement("img");
+   foto.src = `${item}.jpg`;
+   foto.alt = 'Gambar dari JavaScript';
+   document.getElementById(`img${item}`).appendChild(foto);
+} 
